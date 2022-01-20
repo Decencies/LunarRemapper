@@ -65,7 +65,6 @@ public class Main {
 
         FileUtil.walk(new File("./input"), ".jar").forEach(lunarFile -> {
             if (!lunarFile.getName().contains("lunar-prod")) return;
-            if (!lunarFile.getPath().contains("1.8")) return;
             LunarVersion lunarVersion = new LunarVersion();
             MappingProvider mappingProvider = null;
             try (JarFile lunarJar = new JarFile(lunarFile)) {
