@@ -1,12 +1,6 @@
 # Compiled class file
 *.class
 
-# Remapper I/O
-input/
-export/
-mappings/
-optifine/
-
 target/
 .idea/
 
