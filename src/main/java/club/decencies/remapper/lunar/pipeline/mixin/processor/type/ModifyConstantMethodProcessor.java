@@ -16,7 +16,7 @@ public class ModifyConstantMethodProcessor extends MethodProcessor {
     public void process(MethodNode mergedMethod, ClassNode mixinNode, ClassNode patchedNode, ClassNode originalNode, LunarVersion version, MappingProvider provider, Map<String, FieldNode> fields, Map<String, MethodNode> methods) {
         mixinNode.methods.stream().filter(md -> md.name.equals(strippedMethodName(mergedMethod.name))).findFirst().ifPresent(modifyConstMethod -> {
             if (modifyConstMethod.visibleAnnotations == null) {
-                throw new RuntimeException(String.format("@ModifyConstant missing from %s.%s (Don't know how to handle)", mixinNode.name, modifyConstMethod.name));
+                //throw new RuntimeException(String.format("@ModifyConstant missing from %s.%s (Don't know how to handle)", mixinNode.name, modifyConstMethod.name));
             }
             clone(mergedMethod.instructions, modifyConstMethod.instructions);
         });
