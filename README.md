@@ -1,5 +1,6 @@
 # LunarRemapper
 The Mixin re-mapper for Lunar Client.
+I have little time to work on this project, if you know what you're doing and have familiarized yourself with this (terrible) source code, please feel free to make some PRs.
 
 # Usage
 
