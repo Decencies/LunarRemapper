@@ -2,6 +2,10 @@
 The Mixin re-mapper for Lunar Client.
 I have little time to work on this project, if you know what you're doing and have familiarized yourself with this (terrible) source code, please feel free to make some PRs.
 
+# <!> Update
+
+For newer lunar versions, please add a blank file with the full version name in the JAR, example: 1.8 will have a blank `1.8.9` file within the `lunar-prod` JAR.
+
 # Usage
 
 To setup this tool, you are required to add your client files under the `input` folder, in the following structure:
