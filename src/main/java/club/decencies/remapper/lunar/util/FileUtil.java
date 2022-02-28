@@ -58,7 +58,8 @@ public class FileUtil {
 
     private static void assertDirectoryExists(File directory) throws FileNotFoundException {
         if (!directory.exists()) {
-            throw new FileNotFoundException("The directory \"" + directory.getName() + "\" does not exist!");
+            throw new FileNotFoundException("The directory \"" + directory.getName() + "\" does not exist!" +
+                    " The full expected path: " + directory.getAbsolutePath());
         }
     }
 }
