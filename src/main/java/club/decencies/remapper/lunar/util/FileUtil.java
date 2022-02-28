@@ -1,6 +1,7 @@
 package club.decencies.remapper.lunar.util;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.BiConsumer;
@@ -14,7 +15,9 @@ import java.util.zip.ZipFile;
  */
 public class FileUtil {
 
-    public static void walk(File directory, BiConsumer<File, File> consumer) {
+    public static void walk(File directory, BiConsumer<File, File> consumer) throws FileNotFoundException {
+        assertDirectoryExists(directory);
+
         for (File child : Objects.requireNonNull(directory.listFiles())) {
             if (child.isDirectory()) {
                 for (File file : Objects.requireNonNull(child.listFiles())) {
@@ -38,7 +41,9 @@ public class FileUtil {
         ts.forEach(r -> processor.accept(r, global));
     }
 
-    public static Collection<File> walk(File directory, String filter) {
+    public static Collection<File> walk(File directory, String filter) throws FileNotFoundException {
+        assertDirectoryExists(directory);
+
         return walk(directory, filter, new ArrayList<>());
     }
 
@@ -51,4 +56,9 @@ public class FileUtil {
         return current;
     }
 
+    private static void assertDirectoryExists(File directory) throws FileNotFoundException {
+        if (!directory.exists()) {
+            throw new FileNotFoundException("The directory \"" + directory.getName() + "\" does not exist!");
+        }
+    }
 }
