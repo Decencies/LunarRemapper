@@ -19,7 +19,7 @@ public class OptiFineDownloader {
     // todo refactor..
     @SneakyThrows
     public static void download(String version, File destination, Consumer<JarFile> consumer) {
-        if (!version.startsWith("preview") && version.contains("pre")) {
+        if (!version.contains("preview_") && version.contains("pre")) {
             version = "preview_".concat(version);
         }
         if (destination.exists() && destination.length() > 0) {
