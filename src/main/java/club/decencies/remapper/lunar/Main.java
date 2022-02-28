@@ -381,6 +381,10 @@ public class Main {
                     }
                 }
             }
+            else {
+                throw new UnsupportedOperationException("Could not resolve the input's version, so no further operations are supported." +
+                        "\nDid you forget to add a blank file with the title of the version inside of the lunar-prod JAR?");
+            }
         });
     }
 
