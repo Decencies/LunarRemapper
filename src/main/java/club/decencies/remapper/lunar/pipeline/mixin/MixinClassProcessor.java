@@ -94,7 +94,7 @@ public class MixinClassProcessor {
 
         int mixinIndex = 0;
 
-        final String mappedName = provider.lookupClassName(originalNode.name).orElseThrow(() -> new RuntimeException("Could not resolve name of class..."));
+        final String mappedName = provider.lookupClassName(originalNode.name).orElseThrow(() -> new RuntimeException("Could not resolve name of class: " + originalNode.name));
 
         final String trimmedPackage = mappedName.substring(0, mappedName.lastIndexOf('/')).replace("net/minecraft/", "");
 
