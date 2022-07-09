@@ -1,8 +1,12 @@
+> Notice: <br />
+> - 
+> This repository has been archived. Moonsworth has started shipping Lunar Client with un-touched mixin classes, rendering this tool obsolete.
+> <br />  <br /> 
+
 # LunarRemapper
 The Mixin re-mapper for Lunar Client.
-I have little time to work on this project, if you know what you're doing and have familiarized yourself with this (terrible) source code, please feel free to make some PRs.
 
-# <!> Update
+### Additional info
 
 For newer lunar versions, please add a blank file with the full version name in the JAR, example: 1.8 will have a blank `1.8.9` file within the `lunar-prod` JAR.
 
